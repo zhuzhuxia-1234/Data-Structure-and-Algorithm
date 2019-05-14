@@ -4,7 +4,7 @@ Created on Tue May 14 14:17:28 2019
 
 @author: zhuxibing
 """
-
+##如果一个数被质数2，3，5整除后余数是1，则该数是丑数
 import time
 def finduglynum(n):
 	time.clock()
