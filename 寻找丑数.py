@@ -27,6 +27,24 @@ def finduglynum(n):
 		i += 1
 	print("运行时间：", time.clock())
 	print(uglynum)
- 
+	
+def GetUglyNumber_Solution(self, index):
+        # write code here
+    if index<=0:
+        return 0
+    ugly_list=[1]
+    indextwo=0
+    indexthree=0
+    indexfive=0
+    for i in range(index-1):
+        newugly=min(ugly_list[indextwo]*2,ugly_list[indexthree]*3,ugly_list[indexfive]*5)
+        ugly_list.append(newugly)
+        if newugly%2==0:
+            indextwo+=1
+        if newugly%3==0:
+            indexthree+=1
+        if newugly%5==0:
+            indexfive+=1
+    return ugly_list[-1]
 # 测试
 finduglynum(20)
